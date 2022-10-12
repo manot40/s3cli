@@ -5,7 +5,7 @@ import { cli, client, defaultParam } from "../utils/index.js";
 
 cli
   .command("put")
-  .option("--acl <ACL>", "Set object ACL (default: private)", "private")
+  .option("--acl <ACL>", "Set object ACL", "private")
   .argument("<key>", "Key of the object to put")
   .argument("<path>", "Path to file for put")
   .description("Put object to S3")

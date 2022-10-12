@@ -1,0 +1,22 @@
+{
+  "name": "s3cli",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "main": "bin/index.js",
+  "scripts": {
+    "start": "node .",
+    "start:dev": "npm run build && npm start",
+    "build": "esbuild index.ts --minify --bundle --outfile=bin/index.js --platform=node --target=node14",
+    "test": "node . get \"public/61307cfde12bb5f9aa47d64df261e46397554404.png\""
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.186.0",
+    "@types/node": "^18.8.3",
+    "commander": "^9.4.1",
+    "esbuild": "^0.15.10",
+    "typescript": "^4.8.4"
+  }
+}
